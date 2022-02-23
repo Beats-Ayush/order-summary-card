@@ -1,0 +1,184 @@
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--Pale-blue);
+}
+
+.container {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 25rem;
+  min-width: 21rem;
+  height: fit-content;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0 15px 20px hsl(224, 23%, 80%);
+  margin: 0 2.25rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.img-wrapper {
+}
+
+.img-wrapper img {
+}
+
+.card .title {
+  text-align: center;
+  color: var(--Dark-blue);
+  line-height: 1;
+  font-weight: 900;
+  margin: 2.25rem 0 1.5rem;
+  font-size: 1.5rem;
+}
+
+.card .summary {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--Desaturated-blue);
+  margin: 0;
+  line-height: 1.4;
+  margin: 0 2rem;
+}
+
+.info-form-wrapper {
+  margin: 2.25rem;
+}
+
+.info-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--Very-pale-blue);
+  margin-bottom: 2.2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.info-wrapper .music-icon {
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+}
+
+.info-wrapper .plan {
+  /* margin: 1rem 0 auto; */
+  margin-left: 1rem;
+  margin-right: auto;
+}
+
+.plan .annual-plan {
+  color: var(--Dark-blue);
+  font-weight: 700;
+}
+
+.plan .price {
+  color: var(--Desaturated-blue);
+}
+
+.info-wrapper .change-anchor {
+  font-weight: 700;
+  color: var(--Bright-blue);
+  transition: opacity 0.2s ease;
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment .proceed-payment {
+  padding: 1rem 0;
+  border: none;
+  color: var(--Very-pale-blue);
+  background-color: var(--Bright-blue);
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 15px 20px hsl(224, 23%, 80%);
+  transition: opacity 0.2s ease;
+}
+
+.payment .proceed-payment:hover,
+.info-wrapper .change-anchor:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.payment .cancel-order {
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+  color: var(--Desaturated-blue);
+  transition: color 0.2s ease;
+}
+
+.payment .cancel-order:hover {
+  color: var(--Dark-blue);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 0.8rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1rem;
+  width: 100%;
+}
+
+.attribution a {
+  color: var(--Bright-blue);
+}
+
+.attribution a:hover {
+  color: var(--Dark-blue);
+}
+
+@media screen and (max-width: 32rem) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .card .summary {
+    font-size: 0.9rem;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
