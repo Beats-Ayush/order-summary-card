@@ -28,6 +28,9 @@ body {
 
 .container {
   height: 100vh;
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 
   display: flex;
   justify-content: center;
@@ -172,6 +175,10 @@ img {
 @media screen and (max-width: 32rem) {
   body {
     font-size: 0.9rem;
+  }
+
+  .container {
+    background-image: url(images/pattern-background-mobile.svg);
   }
 
   .card .summary {
